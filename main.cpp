@@ -16,10 +16,7 @@ void createPageSeparator(ofstream &file, int page_number) {
     file << endl << endl;
 }
 
-int main() {
-    string filename = "document.txt";
-    string output = "output.txt";
-    
+int paginateSourceToDestination(string filename, string output) {
     ifstream infile(filename);
     ofstream destFile(output);
 
@@ -44,7 +41,6 @@ int main() {
     while (infile >> word) {
         if (chars_per_line != 0) need_space = true;
         int next_size = chars_per_line + word.length() +((need_space) ? 1: 0);
-        cout << next_size << endl;
         if (next_size > MAXCHARS) {
             chars_per_line = 0;
             lines++;
@@ -68,4 +64,10 @@ int main() {
     destFile.close();
 
     return 0;
+}
+
+int main() {
+    string filename = "document.txt";
+    string output = "output.txt";
+    paginateSourceToDestination(filename, output);
 }
