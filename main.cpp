@@ -25,7 +25,7 @@ void createPageSeparator(ofstream &file, int page_number) {
 //Output: Returns 1 if either of the files are not able to be
 //        opened, 0 if all the operations are done without
 //        any error.
-//Action: Paginates the input file filenamem with lines of
+//Action: Paginates the input file filename with lines of
 //        length at most MAXCHARS and MAXLINES per page with
 //        page separators and page number. The pagination is
 //        saved in the output file.
