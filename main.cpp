@@ -7,6 +7,10 @@
 
 using namespace std;
 
+//Input: Outpout file stream: ofstream, number of page: Integer
+//Output: None
+//Action: Insert a page separator in file with page_number
+//        in the right margin of the page 
 void createPageSeparator(ofstream &file, int page_number) {
     string s = to_string(page_number);
     int spaces  = s.length();
@@ -16,6 +20,15 @@ void createPageSeparator(ofstream &file, int page_number) {
     file << endl << endl;
 }
 
+//Input: Name of the input file to paginate: string, name of
+//       ouptut file to save the pagination: string.
+//Output: Returns 1 if either of the files are not able to be
+//        opened, 0 if all the operations are done without
+//        any error.
+//Action: Paginates the input file filenamem with lines of
+//        length at most MAXCHARS and MAXLINES per page with
+//        page separators and page number. The pagination is
+//        saved in the output file.
 int paginateSourceToDestination(string filename, string output) {
     ifstream infile(filename);
     ofstream destFile(output);
