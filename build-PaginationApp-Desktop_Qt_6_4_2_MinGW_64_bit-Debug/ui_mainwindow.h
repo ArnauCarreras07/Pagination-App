@@ -116,7 +116,15 @@ public:
         pushButton_2->setObjectName("pushButton_2");
         sizePolicy1.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy1);
-        QIcon icon(QIcon::fromTheme(QString::fromUtf8("folder-open")));
+        pushButton_2->setMinimumSize(QSize(50, 0));
+        pushButton_2->setMaximumSize(QSize(50, 25));
+        QIcon icon;
+        QString iconThemeName = QString::fromUtf8("folder-open");
+        if (QIcon::hasThemeIcon(iconThemeName)) {
+            icon = QIcon::fromTheme(iconThemeName);
+        } else {
+            icon.addFile(QString::fromUtf8("."), QSize(), QIcon::Normal, QIcon::Off);
+        }
         pushButton_2->setIcon(icon);
         pushButton_2->setAutoDefault(false);
 
@@ -124,6 +132,13 @@ public:
 
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
+        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
+        label_2->setSizePolicy(sizePolicy2);
+        label_2->setMinimumSize(QSize(80, 0));
+        label_2->setMaximumSize(QSize(80, 16777215));
 
         horizontalLayout_3->addWidget(label_2);
 
@@ -146,11 +161,11 @@ public:
 
         lineEdit = new QLineEdit(centralwidget);
         lineEdit->setObjectName("lineEdit");
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
+        lineEdit->setSizePolicy(sizePolicy3);
 
         verticalLayout_3->addWidget(lineEdit);
 
@@ -229,6 +244,8 @@ public:
 
         retranslateUi(MainWindow);
         QObject::connect(pushButton, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::close));
+        QObject::connect(pushButton_2, SIGNAL(clicked()), MainWindow, SLOT(browse()));
+        QObject::connect(MainWindow, SIGNAL(fileName(QString)), label_2, SLOT(setText(QString)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -239,7 +256,7 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "Input text:", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "None", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Output text", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Output text:", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Paginate", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
     } // retranslateUi

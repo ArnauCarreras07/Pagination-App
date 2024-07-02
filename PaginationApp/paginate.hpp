@@ -34,4 +34,4 @@ private:
     void createPageSeparator(ofstream &file, int page_number);
 };
 
-#endif // PAGINATE_HPP
+#endif // PAGINATE_H
