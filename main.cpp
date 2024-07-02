@@ -1,12 +1,7 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-
-#define MAXCHARS 80
-#define MAXLINES 25
+#include "paginate.hpp"
 
 using namespace std;
-
+/*
 //Input: Outpout file stream: ofstream, number of page: Integer
 //Output: None
 //Action: Insert a page separator in file with page_number
@@ -78,9 +73,10 @@ int paginateSourceToDestination(string filename, string output) {
 
     return 0;
 }
-
+*/
 int main() {
     string filename = "document.txt";
     string output = "output.txt";
-    paginateSourceToDestination(filename, output);
+    Paginate p = Paginate();
+    p.paginateSourceToDestination(filename, output);
 }

@@ -10,10 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    paginate.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    paginate.hpp
 
 FORMS += \
     mainwindow.ui
