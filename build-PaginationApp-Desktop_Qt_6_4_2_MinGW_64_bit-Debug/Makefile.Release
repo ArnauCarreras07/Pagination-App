@@ -261,6 +261,8 @@ release/moc_mainwindow.cpp: ../PaginationApp/mainwindow.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qdialog.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/QFileInfo \
+		../../../Qt/6.4.2/mingw_64/include/QtCore/QDir \
+		../PaginationApp/paginate.hpp \
 		release/moc_predefs.h \
 		../../../Qt/6.4.2/mingw_64/bin/moc.exe
 	D:\Qt\6.4.2\mingw_64\bin\moc.exe $(DEFINES) --include D:/Entrust/Pagination-App/build-PaginationApp-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/release/moc_predefs.h -ID:/Qt/6.4.2/mingw_64/mkspecs/win32-g++ -ID:/Entrust/Pagination-App/PaginationApp -ID:/Qt/6.4.2/mingw_64/include -ID:/Qt/6.4.2/mingw_64/include/QtWidgets -ID:/Qt/6.4.2/mingw_64/include/QtGui -ID:/Qt/6.4.2/mingw_64/include/QtCore -I. -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\PaginationApp\mainwindow.h -o release\moc_mainwindow.cpp
@@ -437,6 +439,8 @@ release/main.o: ../PaginationApp/main.cpp ../PaginationApp/mainwindow.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qdialog.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/QFileInfo \
+		../../../Qt/6.4.2/mingw_64/include/QtCore/QDir \
+		../PaginationApp/paginate.hpp \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/QApplication \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qapplication.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/qcoreapplication.h \
@@ -610,6 +614,8 @@ release/mainwindow.o: ../PaginationApp/mainwindow.cpp ../PaginationApp/mainwindo
 		../../../Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qdialog.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/QFileInfo \
+		../../../Qt/6.4.2/mingw_64/include/QtCore/QDir \
+		../PaginationApp/paginate.hpp \
 		ui_mainwindow.h \
 		../../../Qt/6.4.2/mingw_64/include/QtCore/QVariant \
 		../../../Qt/6.4.2/mingw_64/include/QtGui/QIcon \
@@ -645,6 +651,12 @@ release/mainwindow.o: ../PaginationApp/mainwindow.cpp ../PaginationApp/mainwindo
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
 		../../../Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
 		../../../Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.4.2/mingw_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.4.2/mingw_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.4.2/mingw_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.4.2/mingw_64/include/QtGui/qpen.h \
+		../../../Qt/6.4.2/mingw_64/include/QtGui/qtextoption.h \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/QMenuBar \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qmenubar.h \
 		../../../Qt/6.4.2/mingw_64/include/QtWidgets/qmenu.h \
