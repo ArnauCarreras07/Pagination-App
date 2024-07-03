@@ -37,7 +37,10 @@ void MainWindow::paginate() {
         string inputPath = input.absoluteFilePath().toStdString();
         string outputPath = dirName + "/" + outputName;
 
-        p.paginateSourceToDestination(inputPath, outputPath);
+        int res = p.paginateSourceToDestination(inputPath, outputPath);
+        if (res == 0) {
+            message.show();
+        }
     }
 }
 

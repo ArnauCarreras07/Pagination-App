@@ -6,6 +6,7 @@
 #include <QFileInfo>
 #include <QDir>
 #include "paginate.hpp"
+#include "dialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,5 +33,6 @@ private:
     QFileInfo input;
     QString output;
     Paginate p = Paginate();
+    Dialog message;
 };
 #endif // MAINWINDOW_H
