@@ -5,7 +5,6 @@
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QDir>
-#include <QDebug>
 #include "paginate.hpp"
 
 QT_BEGIN_NAMESPACE

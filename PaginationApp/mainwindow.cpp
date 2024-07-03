@@ -37,9 +37,6 @@ void MainWindow::paginate() {
         string inputPath = input.absoluteFilePath().toStdString();
         string outputPath = dirName + "/" + outputName;
 
-        qDebug() << QString::fromStdString(inputPath);
-        qDebug() << QString::fromStdString(outputPath);
-
         p.paginateSourceToDestination(inputPath, outputPath);
     }
 }
