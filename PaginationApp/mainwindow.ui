@@ -392,10 +392,27 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>paginate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>250</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>53</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <signal>fileName(QString)</signal>
   <slot>browse()</slot>
   <slot>receiveOutputName(QString)</slot>
+  <slot>paginate()</slot>
  </slots>
 </ui>

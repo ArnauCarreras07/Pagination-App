@@ -246,6 +246,8 @@ public:
         QObject::connect(pushButton, &QPushButton::clicked, MainWindow, qOverload<>(&QMainWindow::close));
         QObject::connect(pushButton_2, SIGNAL(clicked()), MainWindow, SLOT(browse()));
         QObject::connect(MainWindow, SIGNAL(fileName(QString)), label_2, SLOT(setText(QString)));
+        QObject::connect(lineEdit, SIGNAL(textChanged(QString)), MainWindow, SLOT(receiveOutputName(QString)));
+        QObject::connect(pushButton_3, SIGNAL(clicked()), MainWindow, SLOT(paginate()));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi

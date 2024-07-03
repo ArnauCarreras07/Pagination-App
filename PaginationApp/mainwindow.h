@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QDir>
+#include <QDebug>
+#include "paginate.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,10 +26,12 @@ signals:
 public slots:
     void browse();
     void receiveOutputName(const QString &output);
+    void paginate();
 
 private:
     Ui::MainWindow *ui;
     QFileInfo input;
     QString output;
+    Paginate p = Paginate();
 };
 #endif // MAINWINDOW_H

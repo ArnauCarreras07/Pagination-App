@@ -25,3 +25,22 @@ void MainWindow::receiveOutputName(const QString &output) {
     this->output = output;
 }
 
+void MainWindow::paginate() {
+    if (input.size() > 0) {
+        if (output.isEmpty()) output = QString("out");
+        string outputName = output.toStdString();
+        outputName = outputName + ".txt";
+
+        QDir directory = input.dir();
+        string dirName = directory.absolutePath().toStdString();
+
+        string inputPath = input.absoluteFilePath().toStdString();
+        string outputPath = dirName + "/" + outputName;
+
+        qDebug() << QString::fromStdString(inputPath);
+        qDebug() << QString::fromStdString(outputPath);
+
+        p.paginateSourceToDestination(inputPath, outputPath);
+    }
+}
+
