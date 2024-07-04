@@ -2,7 +2,6 @@
 
 App for paginating plain text files in screen format 80x25, with a maximum of 80 characters per line and 25 lines per page, historically used in DOS-based apps, among others examples.
 
-
 ## Execution
 
 ### Windows
@@ -51,3 +50,7 @@ We can specify the output file name(without adding an extension for the file) in
 When we press the "Paginate" button the input file(if provided) will be processed and paginated saving the result in "output_name.txt" being the output_name the name given in the Output file text line edit. If no output name was provided it will be named "out.txt" by default.
 
 If the pagination is completed with success we will get a confirmation message on screen. Just press "OK" to close it.
+
+## Examples
+
+document.txt and output.txt are examples of input and output of the program, respectively.
